@@ -46,12 +46,6 @@ allgpiopin.elf \
 MAP_FILES += \
 allgpiopin.map \
 
-SIZE_OUTPUT += \
-default.size.stdout \
-
-OBJDUMP_LIST += \
-allgpiopin.list \
-
 OBJCOPY_HEX += \
 allgpiopin.hex \
 
@@ -68,16 +62,6 @@ allgpiopin.elf allgpiopin.map: $(OBJS) $(USER_OBJS) /home/nandhakumar/proteus_pr
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-size  $(EXECUTABLES)
-	@echo 'Finished building: $@'
-	@echo ' '
-
-allgpiopin.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "allgpiopin.list"
-	@echo 'Finished building: $@'
-	@echo ' '
-
 allgpiopin.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "allgpiopin.hex"
 	@echo 'Finished building: $@'
@@ -85,10 +69,10 @@ allgpiopin.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 
 # Other Targets
 clean:
-	-$(RM) allgpiopin.elf allgpiopin.hex allgpiopin.list allgpiopin.map default.size.stdout
+	-$(RM) allgpiopin.elf allgpiopin.hex allgpiopin.map
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
+secondary-outputs: $(OBJCOPY_HEX)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'
