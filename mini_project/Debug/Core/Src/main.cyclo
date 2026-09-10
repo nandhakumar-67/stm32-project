@@ -1,0 +1,17 @@
+../Core/Src/main.c:95:6:delay_us	3
+../Core/Src/main.c:116:10:MQ_Read	1
+../Core/Src/main.c:137:9:DHT11_Read	15
+../Core/Src/main.c:258:9:Fire_Read	2
+../Core/Src/main.c:275:10:Ultrasonic_Read	6
+../Core/Src/main.c:356:6:Relay_Normal	1
+../Core/Src/main.c:373:6:Relay_Danger	1
+../Core/Src/main.c:389:5:main	1
+../Core/Src/main.c:447:6:SystemClock_Config	3
+../Core/Src/main.c:498:6:PeriphCommonClock_Config	2
+../Core/Src/main.c:524:13:MX_ADC1_Init	3
+../Core/Src/main.c:576:13:MX_I2C1_Init	2
+../Core/Src/main.c:610:13:MX_I2S1_Init	2
+../Core/Src/main.c:644:13:MX_I2S2_Init	2
+../Core/Src/main.c:678:13:MX_I2S3_Init	2
+../Core/Src/main.c:712:13:MX_GPIO_Init	1
+../Core/Src/main.c:754:6:Error_Handler	1
