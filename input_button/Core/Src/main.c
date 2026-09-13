@@ -102,6 +102,8 @@ void Error_Handler(void)
 
     while (1)
     {
+    	HAL_GPIO_Togllepin(GPIO,GPIO_PIN_13);
+    	HAL_Delay(500);
     }
 }
 

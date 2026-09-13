@@ -1,0 +1,12 @@
+../Core/Src/main.c:35:6:OLED_WriteCommand	32	static
+../Core/Src/main.c:53:6:OLED_WriteData	160	static
+../Core/Src/main.c:75:6:OLED_Init	8	static
+../Core/Src/main.c:123:6:OLED_Clear	144	static
+../Core/Src/main.c:144:6:OLED_SetCursor	16	static
+../Core/Src/main.c:155:6:OLED_DrawChar	24	static
+../Core/Src/main.c:259:6:OLED_DrawString	16	static
+../Core/Src/main.c:274:5:main	8	static
+../Core/Src/main.c:338:6:SystemClock_Config	88	static
+../Core/Src/main.c:400:13:MX_I2C1_Init	8	static
+../Core/Src/main.c:435:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:472:6:Error_Handler	4	static,ignoring_inline_asm
